@@ -1,0 +1,38 @@
+package com.curso.math;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+class MethodOrderedByOrderTest {
+
+
+	@Test
+	@Order(1)
+	void testD() {
+		System.out.println("Running Test D");
+	}
+	
+	@Order(3)
+	@Test
+	void testA() {
+		System.out.println("Running Test A");
+	}
+	
+	@Test
+	@Order(4)
+	void testC() {
+		System.out.println("Running Test C");
+	}
+	@Test
+	@Order(2)
+	void testB() {
+		System.out.println("Running Test B");
+	}
+
+
+}
